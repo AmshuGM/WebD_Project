@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="astyle.css">
+   <title>Document</title>
+</head>
+<body>
+   <div class="hero">
+      <div class="form-box">
+         <div class="button-box">
+            <div id="btn"></div>
+            <button typr="button" class="toggle-btn" onclick="login()">User</button>
+            <button typr="button" class="toggle-btn" onclick="admin()">Admin</button>
+         
+         </div>
+         <div class="social-icons">
+            <img src="images\fb.png">
+            <img src="images\gp.png">
+            <img src="images\tw.png">
+         </div>
+         <form action='https://www.google.com' id="login" class="input-group">
+            <input type="email" class="input-feild" placeholder="User Id" required>
+            <input type="password" id="pas" class="input-feild" placeholder="Enter password" required>
+            <input type="password" id="cfrmpas" class="input-feild" placeholder="Confirm password" required>
+                  <input type="checkbox" class="check-box"><span>Remember password</span>
+                  <button type="submit" class="submit-btn">Signin</button>
+         </form>
+         <form action='https://www.google.com' id="admin" class="input-group">
+            <input type="email" class="input-feild" placeholder="User Id" required>
+            <input type="text" class="input-feild" placeholder="Admin Id" required>
+
+            <input type="password" id="pas" class="input-feild" placeholder="Enter password" required>
+            <input type="password" id = "cfrmpas" class="input-feild" placeholder="Confirm password" required>
+                  <input type="checkbox" class="check-box"><span>Remember password</span>
+                  <button type="submit" onclick="confirm()" class="submit-btn">Signin</button>
+         </form>
+         
+      </div>
+     
+     </div>
+
+   <script type="text/javascript">
+      var x=document.getElementById("login");
+      var y=document.getElementById("admin");
+      var z=document.getElementById("btn");
+
+      function admin(){
+         x.style.left="-500px";
+         y.style.left="50px";
+         z.style.left="110px"
+
+      }
+      function login(){
+         x.style.left="50px";
+         y.style.left="500px";
+         z.style.left="0px"
+
+      }
+     
+      function confirm(){
+        let pas=document.getElementById("pas").value;
+        let cfrmpas=document.getElementById("cfrmpas").value;
+        if(pas.length<8){
+         alert("password should be atleast 8 charecters long")
+        }
+       else if(pas!=cfrmpas){
+        
+        
+            alert("passwords don't match");
+        }
+
+      }
+  
+      
+     
+   </script>
+</body>
+</html>

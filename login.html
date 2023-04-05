@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="astyle.css">
+   <title>Document</title>
+</head>
+<body>
+   <div class="hero">
+      <div class="form-box">
+         <div class="button-box">
+            <div id="btn"></div>
+            <button typr="button" class="toggle-btn" onclick="login()">User</button>
+            <button typr="button" class="toggle-btn" onclick="admin()">Admin</button>
+         
+         </div>
+         <div class="social-icons">
+            <img src="images\fb.png">
+            <img src="images\gp.png">
+            <img src="images\tw.png">
+         </div>
+         <form id="login" class="input-group">
+            <input type="email" class="input-feild" placeholder="User Id" required>
+            <input type="password" class="input-feild" placeholder="Enter password" required>
+                  <input type="checkbox" class="check-box"><span>Remember password</span>
+                  <button type="submit" class="submit-btn">Login</button>
+         </form>
+         <form id="admin" class="input-group">
+            <input type="email" class="input-feild" placeholder="User Id" required>
+            <input type="email" class="input-feild" placeholder="Admin Id" required>
+
+            <input type="password" class="input-feild" placeholder="Enter password" required>
+                  <input type="checkbox" class="check-box"><span>Remember password</span>
+                  <button type="submit" class="submit-btn">Login</button>
+         </form>
+         
+      </div>
+     
+     </div>
+
+   <script>
+      var x=document.getElementById("login");
+      var y=document.getElementById("admin");
+      var z=document.getElementById("btn");
+
+      function admin(){
+         x.style.left="-500px";
+         y.style.left="50px";
+         z.style.left="110px"
+
+      }
+      function login(){
+         x.style.left="50px";
+         y.style.left="500px";
+         z.style.left="0px"
+
+      }
+      var f=document.getElementsByClassName("hero");
+   </script>
+</body>
+</html>
