@@ -86,7 +86,7 @@ body{
         .open-menu{
            /* visibility:visible;
            opacity:1; */
-           max-height:400px;
+           max-height:600px;
         }
         .sub-menu{
             background: white;

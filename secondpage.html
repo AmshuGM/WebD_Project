@@ -86,12 +86,12 @@
     <hr>
     <a href="#" class="sub-menu-link">
         
-        <p>AMSHU G M</p>
+        <p id="name"></p>
         
     </a>
     <a href="#" class="sub-menu-link">
         
-        <p>1BM21CS019</p>
+        <p id="usn"></p>
        
     </a>
     <a href="#" class="sub-menu-link">
@@ -102,6 +102,13 @@
     <a href="#" class="sub-menu-link">
         
         <p>Department : CSE</p>
+      
+    </a>
+    <a href="#" class="sub-menu-link">
+        
+        <div class="wrapper_class" onclick="value_changer()">
+            <p>Edit Profile</p>
+        </div>
       
     </a>
     <a href="HOMEPAGE.HTML" class="sub-menu-link">
@@ -278,6 +285,19 @@
 
       </footer>
     <script>
+         let nme = document.getElementById("name");
+            let un=document.getElementById("usn");
+            nme.innerHTML="Amshu G M";
+            un.innerHTML="1BM21CS019";
+        function value_changer(){
+           
+            
+           nme.innerHTML =  prompt("enter name");
+           un.innerHTML =  prompt("enter usn");
+        //    nme.innerHTML = String(nnme);
+        //    un.innerHTML = String(nun);
+           
+        }
         
         function myfunc(){
             let s=document.getElementById("subMenu");
